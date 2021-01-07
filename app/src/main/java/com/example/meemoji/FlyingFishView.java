@@ -73,8 +73,8 @@ public class FlyingFishView extends View{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        canvasWidth = canvas.getWidth();
-        canvasHeight = canvas.getHeight();
+        canvasWidth = getWidth();
+        canvasHeight = getHeight();
 
         canvas.drawBitmap(backgroundImage, 0, 0, null);
 
@@ -92,11 +92,12 @@ public class FlyingFishView extends View{
         fishSpeed+=2;
 
         if(touch){
-            canvas.drawBitmap(fish[1], fishX, fishY, null);
+            canvas.drawBitmap(fish[0], fishX, fishY, null);
             touch = false;
         }
         else{
             canvas.drawBitmap(fish[0], fishX, fishY, null);
+
         }
         yellowX = yellowX - YellowSpeed;
 
@@ -109,7 +110,7 @@ public class FlyingFishView extends View{
             yellowX = canvasWidth+21;
             yellowY = (int)Math.floor(Math.random() * (maxFishY - minFishY) + minFishY);
         }
-        canvas.drawCircle(yellowX, yellowY, 25, yellowPaint);
+        canvas.drawCircle(yellowX, yellowY, 30, yellowPaint);
 
         greenX = greenX - greenSpeed;
 
@@ -143,7 +144,7 @@ public class FlyingFishView extends View{
             redX = canvasWidth+21;
             redY = (int)Math.floor(Math.random() * (maxFishY - minFishY) + minFishY);
         }
-        canvas.drawCircle(redX, redY, 30, redPaint);
+        canvas.drawCircle(redX, redY, 40, redPaint);
 
         canvas.drawText("Score: "+score, 20, 60, scorePaint);
 
