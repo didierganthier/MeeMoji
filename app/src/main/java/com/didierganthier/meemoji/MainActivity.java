@@ -1,4 +1,4 @@
-package com.example.meemoji;
+package com.didierganthier.meemoji;
 
 import java.util.Timer;
 import java.util.TimerTask;

@@ -1,4 +1,4 @@
-package com.example.meemoji;
+package com.didierganthier.meemoji;
 
 import android.content.Context;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.example.meemoji;
+package com.didierganthier.meemoji;
 
 import org.junit.Test;
 
