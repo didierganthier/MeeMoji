@@ -20,13 +20,13 @@ public class FlyingFishView extends View{
 
     private int canvasWidth, canvasHeight;
 
-    private int yellowX, yellowY, YellowSpeed= 16;
+    private int yellowX, yellowY, YellowSpeed= 10;
     private Paint yellowPaint = new Paint();
 
-    private int greenX, greenY, greenSpeed= 20;
+    private int greenX, greenY, greenSpeed= 15;
     private Paint greenPaint = new Paint();
 
-    private int redX, redY, redSpeed= 25;
+    private int redX, redY, redSpeed= 15;
     private Paint redPaint = new Paint();
 
     private int score, lifeCounterOfFish;
@@ -57,7 +57,7 @@ public class FlyingFishView extends View{
         greenPaint.setAntiAlias(false);
 
         scorePaint.setColor(Color.WHITE);
-        scorePaint.setTextSize(70);
+        scorePaint.setTextSize(40);
         scorePaint.setTypeface(Typeface.DEFAULT_BOLD);
         scorePaint.setAntiAlias(true);
 
@@ -144,12 +144,12 @@ public class FlyingFishView extends View{
             redX = canvasWidth+21;
             redY = (int)Math.floor(Math.random() * (maxFishY - minFishY) + minFishY);
         }
-        canvas.drawCircle(redX, redY, 40, redPaint);
+        canvas.drawCircle(redX, redY, 30, redPaint);
 
         canvas.drawText("Score: "+score, 20, 60, scorePaint);
 
         for(int i=0;i<3;i++){
-            int x = (int)(580 + life[0].getWidth() * 1.5 * i);
+            int x = (int)(400 + life[0].getWidth() * 1.5 * i);
             int y = 30;
 
             if(i < lifeCounterOfFish){
